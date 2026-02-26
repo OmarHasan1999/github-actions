@@ -7,7 +7,7 @@ jobs:
      steps:
         - name: check if exists file
           run: |
-           if [ -if config.yaml ]; then
+           if [ -f config.yaml ]; then
            run : echo "::debug::config.yaml is exist"
             else 
             run : echo "::error::config.yaml is missed"
