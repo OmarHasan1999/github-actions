@@ -1,0 +1,10 @@
+on:
+  workflow_dispatch:
+
+jobs:
+  expressions:
+    runs-on: ubuntu-latest
+    steps:
+      - name: run expressions
+        run: echo "run expressions workflow"
+        if: ${{ github.event_name == 'push' || github.ref == 'refs/heads/main' }}
